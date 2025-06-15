@@ -1,27 +1,37 @@
-name: Build TokenSMP Plugin
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-on:
-  push:
-    branches: [ "main" ]
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tokensmp</groupId>
+    <artifactId>TokenSMP</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+    <name>TokenSMP</name>
 
-    steps:
-    - uses: actions/checkout@v4
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
 
-    - name: Set up Java
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: 17
+    <dependencies>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.20.1-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
-    - name: Build with Maven
-      run: mvn clean package
-
-    - name: Upload JAR
-      uses: actions/upload-artifact@v4
-      with:
-        name: TokenSMP
-        path: target/*.jar
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
