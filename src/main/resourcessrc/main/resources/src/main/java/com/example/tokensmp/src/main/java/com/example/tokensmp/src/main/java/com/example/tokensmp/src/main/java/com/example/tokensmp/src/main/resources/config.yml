@@ -1,0 +1,57 @@
+tokens:
+  cow:
+    name: "Cow Token"
+    custom_model_data: 1001
+    power: "milk_boost"
+    duration: 10
+    cooldown: 20
+
+  pig:
+    name: "Pig Token"
+    custom_model_data: 1002
+    power: "oink_push"
+    duration: 8
+    cooldown: 15
+
+  wolf:
+    name: "Wolf Token"
+    custom_model_data: 1003
+    power: "summon_wolves"
+    duration: 10
+    cooldown: 30
+
+  bee:
+    name: "Bee Token"
+    custom_model_data: 1004
+    power: "sting_speed"
+    duration: 6
+    cooldown: 20
+
+  enderman:
+    name: "Enderman Token"
+    custom_model_data: 1005
+    power: "teleport"
+    duration: 5
+    cooldown: 25
+
+  phantom:
+    name: "Phantom Token"
+    custom_model_data: 1006
+    power: "night_flight"
+    duration: 15
+    cooldown: 40
+
+  ravager:
+    name: "Ravager Token"
+    custom_model_data: 1007
+    power: "rage_knockback"
+    duration: 10
+    cooldown: 30
+
+  slime:
+    name: "Slime Token"
+    custom_model_data: 1008
+    power: "bouncy_jump"
+    duration: 7
+    cooldown: 15
+    
